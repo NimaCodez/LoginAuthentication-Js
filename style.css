@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: row-reverse;
+    height: 100vh;
+    background-color: #e8eaf0;
+}
+
+.right-form, .left-form {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #654fef;
+    width: 21em;
+    height: 26em;
+    border-radius: .5em;
+    z-index: 1;
+}
+
+.inputs-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-input-group {
+    position: relative;
+}
+
+.form-input-group input {
+    position: absolute;
+    left: 0;
+    padding: 1.3em 3.5em;
+    border: none;
+    outline: none;
+    border-radius: .3em;
+    background-color: rgba(255,255,255,0.5);
+    backdrop-filter: blur(5px);
+    color: #fff;
+    z-index: -1;
+}
+
+.form-input-group input::placeholder {
+    color: #272727;
+}
+
+i {
+    padding: 1.3em;
+    z-index: 100;
+}
+
+.form input[type="submit"] {
+    padding: 1.1em 6em;
+    border-radius: .3em;
+    border: none;
+    outline: none;
+    font-size: .9em;
+    cursor: pointer;
+    transition: all .9s ease-in;
+}
+
+.form input[type="submit"]:hover {
+    transition: all .2s ease;
+    background-color: #121212;
+    color: #fff;
+}

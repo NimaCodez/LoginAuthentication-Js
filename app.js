@@ -33,7 +33,6 @@ submitButton.addEventListener('click', (e) => {
 
 loginButton.addEventListener('click', (e, inputUsername, inputPassword) => {
     e.preventDefault();
-    console.log('clicked')
     let userData = localStorage.getItem("userData");
     let parsedData = JSON.parse(userData);
     let password = '';
@@ -55,7 +54,8 @@ loginButton.addEventListener('click', (e, inputUsername, inputPassword) => {
                 break;
             }
         }
-        let usernameArrayLength = parsedData.usernames.length;
+        let usernameArrayLength = parsedData.usernames.length; // Calculating The Usernames Array length Outside of for loop
+                                                              //  Cause Calculating this amount every time in for loop can cause performance problems
         for (let i = 0; i < usernameArrayLength; i++) {
             username = parsedData.usernames[i];
             if (username == inputUsername) {
